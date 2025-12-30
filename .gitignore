@@ -132,3 +132,7 @@ data/
 .tmp
 *ports
 
+run_4090_*.sh
+run_alfworld_*.sh
+run_1.5b_*.sh
+*.py
