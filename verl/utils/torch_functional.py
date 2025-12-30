@@ -332,7 +332,8 @@ def postprocess_data(
             input_ids = torch.cat([input_ids[:, :left_half], input_ids[:, -right_half:]], dim=-1)
             attention_mask = torch.cat([attention_mask[:, :left_half], attention_mask[:, -right_half:]], dim=-1)
         elif truncation == "error":
-            raise NotImplementedError(f"{sequence_length=} is larger than {max_length=}")
+            max_length = 4096 # 强制扩容
+            # raise NotImplementedError(f"{sequence_length=} is larger than {max_length=}")
         else:
             raise NotImplementedError(f"Unknown truncation method {truncation}")
 

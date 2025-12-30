@@ -189,6 +189,8 @@ class FSDPVLLMShardingManager(BaseShardingManager):
             log_gpu_memory_usage("After sync model weights in sharding manager", logger=logger)
             del params
         else:
+            import torch
+            torch.cuda.empty_cache()
             if "tags" in inspect.signature(self.inference_engine.wake_up).parameters:
                 self.inference_engine.wake_up(tags=["weights"])
             else:
