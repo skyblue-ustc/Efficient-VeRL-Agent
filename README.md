@@ -49,13 +49,13 @@ We implemented a systematic evolution of alignment algorithms:
 | **PPO** | ✅ | ~22.5 GB | 1.0x |
 | **GRPO (R1)** | ❌ (Removed) | **~12.4 GB** (↓45%) | **1.3x** |
 
-### Task Performance
-[Insert WandB Screenshot: Reward Curves for R1 Math or Alfworld]
+
 
 ## 🚀 Quick Start
 
 ### 1. Installation
 ```bash
-git clone [https://github.com/YourUsername/Efficient-VeRL-Agent.git](https://github.com/YourUsername/Efficient-VeRL-Agent.git)
+git clone https://github.com/skyblue-ustc/Efficient-VeRL-Agent.git
 cd Efficient-VeRL-Agent
 pip install -r requirements.txt
+```
